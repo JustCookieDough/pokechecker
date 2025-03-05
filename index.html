@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokelookup</title>
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- google fonts stuff -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body class="dark">
+    <div class="content">
+        <div class="search">
+            <input type="text" id="in" class="text-input">
+            <span id="submit" class="material-symbols-outlined submit-button">search</span>
+        </div>
+        <div class="results">
+            <div class="p-basics">
+                <span><t class="p-name">Bulbasaur</t><t class="p-number">#001</t></span>
+                <div class="p-typing"><span class="type grass">Grass</span><span class="type poison">Poison</span></div>
+            </div>
+            <div class="divider"></div>
+            <div class="p-type-advantages">
+                <div class="p-ta-cat invis" id="vweak"><t>Very Weak to:</t><div class="p-ta-list"></div></div>
+                <div class="p-ta-cat" id="weak"><t>Weak to:</t><div class="p-ta-list"><span class="type flying">Flying</span><span class="type fire">Fire</span><span class="type psychic">Psychic</span><span class="type ice">Ice</span></div></div>
+                <div class="p-ta-cat" id="strong"><t>Resistant to:</t><div class="p-ta-list"><span class="type fighting">Fighting</span><span class="type water">Water</span><span class="type electric">Electric</span><span class="type fairy">Fairy</span></div></div>
+                <div class="p-ta-cat" id="vstrong"><t>Very Resistant to:</t><div class="p-ta-list"><span class="type grass">Grass</span></div></div>
+                <div class="p-ta-cat invis" id="immune"><t>Immune to:</t><div class="p-ta-list"></div></div>
+            </div>
+            <div class="divider"></div>
+            <div class="p-stats">
+                <t class="p-stat-label">HP</t>
+                <t class="p-stat-label">Att.</t>
+                <t class="p-stat-label">Def.</t>
+                <t class="p-stat-label">Sp.A.</t>
+                <t class="p-stat-label">Sp.D.</t>
+                <t class="p-stat-label">Speed</t>
+                <t class="p-stat-label bold">Total</t>
+                <t class="p-stat" id="hp">45</t>
+                <t class="p-stat" id="at">49</t>
+                <t class="p-stat" id="de">49</t>
+                <t class="p-stat" id="sa">65</t>
+                <t class="p-stat" id="sd">65</t>
+                <t class="p-stat" id="sp">45</t>
+                <t class="p-stat bold" id="to">318</t>
+            </div>
+        </div>
+        <t class="not-found invis">Pokemon not found.</t>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
