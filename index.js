@@ -5,6 +5,7 @@ const results = document.getElementsByClassName("results")[0]
 
 // basics
 const pkName = document.getElementsByClassName("p-name")[0]
+const pkNameAnchor = document.getElementsByClassName("p-name-anchor")[0]
 const pkNumber = document.getElementsByClassName("p-number")[0]
 const pkTypingContainer = document.getElementsByClassName("p-typing")[0]
 
@@ -31,20 +32,13 @@ window.onload = () => {
     if (hash == "") { hash = "bulbasaur"; updateHash() }
     search()
     
+    pkNameAnchor.href = 'https://bulbapedia.bulbagarden.net/wiki/' + hash
 }
 
 submit.addEventListener('click', () => {
     hash = input.value.toLowerCase()
     search()
     updateHash()
-})
-
-input.addEventListener('keydown', (e) => {
-    if (e.key == "Enter") submit.click()
-})
-
-pkName.addEventListener('click', () => {
-    window.location.href = 'https://bulbapedia.bulbagarden.net/wiki/' + hash
 })
 
 function search() {
@@ -136,7 +130,8 @@ function updateEffectivenessByMultiplier(effectivenessArr, mult, domNode) {
 
 updateHash = () => { window.location.hash = `#${hash}` }
 
-// HELPERS
+// #region HELPERS
+
 const TYPES = ["normal","fighting","flying","poison","ground","rock","bug","ghost","steel","fire","water","grass",
     "electric","psychic","ice","dragon","dark","fairy"]
 
@@ -159,6 +154,7 @@ const MATCHUPS =   [[1,   2,   1,   1,   1,   1,   1,   0,   1,   1,   1,   1,  
                     [1,   2,   1,   1,   1,   1,   2,   0.5, 1,   1,   1,   1,   1,   0,   1,   1,   0.5, 2  ],
                     [1,   0.5, 1,   2,   1,   1,   0.5, 1,   2,   1,   1,   1,   1,   1,   1,   0,   0.5, 1  ]]
 
+// #endregion
 
 // #region DATA
 

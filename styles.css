@@ -113,6 +113,10 @@ body {
     margin: 0 0 .5rem;
 }
 
+.p-name-anchor {
+    color: inherit;
+}
+
 .p-name {
     font-size: 1.5rem;
     text-decoration: underline;
@@ -191,6 +195,10 @@ body {
     margin: .1rem;
 }
 
+/* #endregion */
+
+/* #region TYPES */
+
 .type.bug{
     background-color: #A6B91A;
 }
@@ -262,6 +270,5 @@ body {
 .type.water{
     background-color: #6390F0;
 }
-
 
 /* #endregion */
