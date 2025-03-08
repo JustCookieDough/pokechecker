@@ -27,19 +27,22 @@ const pkTot = document.getElementById("to")
 
 var hash = window.location.hash.replace("#", "").toLowerCase()
 
+// search on load
 window.onload = () => { 
     input.value = hash
     if (hash == "") { hash = "bulbasaur"; updateHash() }
     search()
-    
-    pkNameAnchor.href = 'https://bulbapedia.bulbagarden.net/wiki/' + hash
 }
 
-submit.addEventListener('click', () => {
+// submit event listeners
+submit.addEventListener('click', () => { submitMon() })
+input.addEventListener('keydown', (e) => { if (e.key == "Enter") submitMon() })
+
+function submitMon() {
     hash = input.value.toLowerCase()
     search()
     updateHash()
-})
+}
 
 function search() {
     pokemonIndex = POKEMON_NAME.indexOf(hash)
@@ -53,6 +56,7 @@ function search() {
 
         // basic info
         pkName.innerText = capitalize(POKEMON_NAME[pokemonIndex])
+        pkNameAnchor.href = 'https://bulbapedia.bulbagarden.net/wiki/' + hash
         pkNumber.innerText = "#" + POKEMON_NUMBER[pokemonIndex].toString().padStart(3, "0")
         
         // typing
