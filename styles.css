@@ -90,6 +90,9 @@ body {
     font: 1.75rem;
     cursor: pointer;
     padding: .25rem;
+    width: 1.5rem;
+    text-align: center;
+    font-weight: bold;
 }
 
 .submit-button:hover {
